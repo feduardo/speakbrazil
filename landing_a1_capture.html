@@ -84,11 +84,18 @@
         }
         
         .preview-image {
-            max-width: 100%;
+            max-width: 350px;
+            width: 100%;
             height: auto;
-            margin: 30px 0;
+            margin: 30px auto;
+            display: block;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .preview-image:hover {
+            transform: scale(1.05);
         }
         
         .benefits {
@@ -197,13 +204,17 @@
             .container {
                 padding: 40px 25px;
             }
-            
+
             h1 {
                 font-size: 28px;
             }
-            
+
             .subheadline {
                 font-size: 18px;
+            }
+
+            .preview-image {
+                max-width: 280px;
             }
         }
     </style>
@@ -216,9 +227,9 @@
         
         <p class="subheadline">Get organized and build confident sentences in 30 days</p>
         
-        <!-- Substitua esta imagem por um mockup real do seu PDF -->
-        <img src="https://via.placeholder.com/500x350/667eea/ffffff?text=Portuguese+Brain+Reset+Checklist" 
-             alt="Portuguese Brain Reset Checklist Preview" 
+        <!-- Imagem do livro Vamos Praticar Volume 1 -->
+        <img src="https://m.media-amazon.com/images/I/71H9VgqyxNL._SL1500_.jpg"
+             alt="Vamos Praticar Volume 1 - Portuguese Learning Book"
              class="preview-image">
         
         <div class="benefits">
