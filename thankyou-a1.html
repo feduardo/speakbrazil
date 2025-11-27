@@ -26,7 +26,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -38,14 +38,61 @@
             justify-content: center;
             padding: 20px;
         }
-        
+
         .container {
-            max-width: 700px;
+            max-width: 900px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             padding: 50px 40px;
             text-align: center;
+        }
+
+        .book-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .book-image:hover {
+            transform: scale(1.05);
+        }
+
+        .video-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .video-section h2 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         .success-icon {
@@ -152,13 +199,25 @@
             .container {
                 padding: 40px 25px;
             }
-            
+
             h1 {
                 font-size: 28px;
             }
-            
+
             .offer-section h2 {
                 font-size: 24px;
+            }
+
+            .book-image {
+                max-width: 250px;
+            }
+
+            .video-section {
+                padding: 20px;
+            }
+
+            .video-section h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -166,13 +225,36 @@
 <body>
     <div class="container">
         <div class="success-icon">✅</div>
-        
+
         <h1>Success! Check Your Email</h1>
-        
+
         <p class="instruction">
             Your <strong>Portuguese Brain Reset Checklist</strong> is on its way to your inbox right now.
         </p>
-        
+
+        <!-- Book Image -->
+        <img src="https://m.media-amazon.com/images/I/71H9VgqyxNL._SL1500_.jpg"
+             alt="Vamos Praticar Volume 1 - Portuguese Learning Book"
+             class="book-image">
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>📹 Mensagem da Professora</h2>
+            <p class="instruction" style="margin-bottom: 20px;">
+                Assista ao vídeo especial da Professora Bárbara sobre como aproveitar melhor o seu checklist:
+            </p>
+            <div class="video-wrapper">
+                <!-- IMPORTANTE: Substitua 'VIDEO_ID_AQUI' pelo ID do vídeo do YouTube -->
+                <!-- Exemplo: se o link é https://www.youtube.com/watch?v=ABC123XYZ, use apenas ABC123XYZ -->
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+                    title="Mensagem da Professora"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
         <div class="email-box">
             <strong>📧 Check your email (including spam folder)</strong><br>
             Look for an email from Speak Brazil with the subject: "Your Portuguese Brain Reset Checklist"
